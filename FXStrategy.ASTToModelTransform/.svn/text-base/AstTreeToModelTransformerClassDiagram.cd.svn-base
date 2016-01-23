@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="FXStrategy.ASTToModelTransform.AstTreeToModelTransformer">
+    <Position X="0.5" Y="0.5" Width="6.5" />
+    <Members>
+      <Method Name="AddGlobalVariableToModel" Hidden="true" />
+      <Method Name="AddPortfolioParamToModel" Hidden="true" />
+      <Method Name="AddPositionDefToModel" Hidden="true" />
+      <Method Name="AddTradingRuleToModel" Hidden="true" />
+      <Method Name="AstTreeToModelTransformer" Hidden="true" />
+      <Method Name="CreateVariable" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAACAAAAAAACAAQAKAAQAAFAAAAAACBAAEA=</HashCode>
+      <FileName>AstTreeToModeTransformer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

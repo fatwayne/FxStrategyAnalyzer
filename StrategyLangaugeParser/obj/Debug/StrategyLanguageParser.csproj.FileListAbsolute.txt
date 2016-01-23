@@ -1,0 +1,11 @@
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\StrategyLangaugeParser\bin\Debug\StrategyLanguageParser.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\StrategyLangaugeParser\bin\Debug\StrategyLanguageParser.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\StrategyLangaugeParser\bin\Debug\Irony.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\StrategyLangaugeParser\bin\Debug\FXDataAccess.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\StrategyLangaugeParser\bin\Debug\FXEntities.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\StrategyLangaugeParser\bin\Debug\Irony.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\StrategyLangaugeParser\bin\Debug\FXDataAccess.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\StrategyLangaugeParser\bin\Debug\FXEntities.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\StrategyLangaugeParser\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\StrategyLangaugeParser\obj\Debug\StrategyLanguageParser.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\StrategyLangaugeParser\obj\Debug\StrategyLanguageParser.pdb

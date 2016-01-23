@@ -1,0 +1,121 @@
+﻿<Window xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit"  x:Class="Simulation.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:r="clr-namespace:StrategyAnalyzerCore.Visualization.Wpf.TabControl;assembly=Wpf.TabControl"
+    xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    xmlns:d3="http://research.microsoft.com/DynamicDataDisplay/1.0"
+    xmlns:toolkit="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit.Extended"
+    Title="FX Strategy Analyzer" Height="565" Width="877"
+    Icon="{x:Static d3:D3IconHelper.DynamicDataDisplayIcon}" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="630*" />
+            <ColumnDefinition Width="225*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="291*" />
+            <RowDefinition Height="235*" />
+        </Grid.RowDefinitions>
+        <d3:TimeChartPlotter Name="plotter" Grid.ColumnSpan="2" >
+            <d3:ChartPlotter.HorizontalAxis>
+                <d3:HorizontalDateTimeAxis Name="dateAxis"/>
+            </d3:ChartPlotter.HorizontalAxis>
+
+            <d3:VerticalAxisTitle FontFamily="Arial" Content="Profit"/>
+            <d3:HorizontalAxisTitle FontFamily="Arial" Content="Date"/>
+        </d3:TimeChartPlotter>
+
+        <r:TabControl x:Name="tabControl" TabStripPlacement="{Binding ElementName=listBox, Path=SelectedItem}"  TabItemMinWidth="150" TabItemMaxWidth="300" SelectedItem="{Binding SelectedStrategyCode}"
+                      TabItemMinHeight="30" TabItemMaxHeight="50" VerticalContentAlignment="Center" Grid.Row="1" NewTabItem="tabControl_NewTabItem" ItemsSource="{Binding StrategyCodeVMs}">
+
+            <!-- Properties for setting the background for the tab items depending on their current state -->
+            <!-- These brushes give the contro an IE7 type look-->
+            <r:TabControl.TabItemNormalBackground>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFFCFDFD" Offset="0"/>
+                    <GradientStop Color="#FFE5EAF5" Offset="0.3"/>
+                    <GradientStop Color="#FFCFD7EB" Offset="0.3"/>
+                    <GradientStop Color="#FFE0E5F5" Offset="0.7"/>
+                    <GradientStop Color="#FFECEEFC" Offset="1"/>
+                </LinearGradientBrush>
+            </r:TabControl.TabItemNormalBackground>
+
+            <r:TabControl.TabItemSelectedBackground>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFFBFDFE" Offset="0"/>
+                    <GradientStop Color="#FFEAF6FB" Offset="0.3"/>
+                    <GradientStop Color="#FFCEE7FA" Offset="0.3"/>
+                    <GradientStop Color="#FFB9D1FA" Offset="1"/>
+                </LinearGradientBrush>
+            </r:TabControl.TabItemSelectedBackground>
+
+            <r:TabControl.TabItemMouseOverBackground>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFFCFDFD" Offset="0"/>
+                    <GradientStop Color="#FFC6DDF7" Offset="0.3"/>
+                    <GradientStop Color="#FF99C6EE" Offset="0.3"/>
+                    <GradientStop Color="#FFB6D6F1" Offset="0.7"/>
+                    <GradientStop Color="#FFD9E9F9" Offset="1"/>
+                </LinearGradientBrush>
+            </r:TabControl.TabItemMouseOverBackground>
+
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                   
+                    <toolkit:RichTextBox x:Name="_richTextBox" Margin="10" BorderBrush="Gray" 
+                                          Text="{Binding Path=Code, UpdateSourceTrigger=PropertyChanged}" AcceptsTab="True"
+                                          ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <toolkit:RichTextBox.TextFormatter>
+                            <toolkit:PlainTextFormatter />
+                        </toolkit:RichTextBox.TextFormatter>
+                    </toolkit:RichTextBox>
+                    <!--<TextBox Text="{Binding Code}" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" Width="600" Height="400" />-->
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+            
+            
+            <TabControl.ItemContainerStyle>
+                <Style TargetType="TabItem">
+                    <Setter Property="Header" Value="{Binding Header}"/>
+                    
+                </Style>
+            </TabControl.ItemContainerStyle>
+        </r:TabControl>
+        <GroupBox Grid.Column="1" Grid.Row="1" Header="Analysis Configuration" Name="groupBox1">
+            <Grid>
+                <dxlc:LayoutControl HorizontalAlignment="Left" Name="layoutControl1" VerticalAlignment="Top" Orientation="Vertical">
+                    <dxlc:LayoutItem Label="Start Date: ">
+                        <dxe:DateEdit  HorizontalAlignment="Left" Name="startDateEdit" VerticalAlignment="Top" Width="100" />
+                    </dxlc:LayoutItem>
+                    <dxlc:LayoutItem Label="End Date: ">
+                        <dxe:DateEdit  HorizontalAlignment="Left" Name="endDateEdit" VerticalAlignment="Top" Width="100" />
+                    </dxlc:LayoutItem>
+                    <dxlc:LayoutItem Label="Term Period: ">
+                        <dxlc:LayoutControl Orientation="Horizontal">
+                            <dxlc:LayoutItem>
+                                <dxe:SpinEdit Name="monthSpinEdit" Value="3"   />
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutItem>
+                                <TextBlock Text="Months" />
+                            </dxlc:LayoutItem>
+                        </dxlc:LayoutControl>                      
+                    </dxlc:LayoutItem>
+                    <dxlc:LayoutItem HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Content="Run" Name="runButton" Click="runButton_Click" />
+                    </dxlc:LayoutItem>
+                </dxlc:LayoutControl>
+
+                <!--<Label Content="Start Date:" Height="28" HorizontalAlignment="Left" Margin="20,28,0,0" Name="label1" VerticalAlignment="Top" />
+                <Label Content="End Date:" Height="28" HorizontalAlignment="Left" Margin="25,56,0,0" Name="label2" VerticalAlignment="Top" />
+                <Label Content="Fixing Period:" Height="28" HorizontalAlignment="Left" Margin="24,85,0,0" Name="label3" VerticalAlignment="Top" />
+                <toolkit:DateTimePicker Height="23" HorizontalAlignment="Left" Margin="111,56,0,0" Name="endDatePicker" VerticalAlignment="Top" Width="85" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="111,85,0,0" Name="textBox3" VerticalAlignment="Top" Width="85" />
+                <Button Content="Run" Height="23" HorizontalAlignment="Left" Margin="76,200,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />-->
+                
+                
+            </Grid>
+        </GroupBox>
+        
+    </Grid>
+</Window>

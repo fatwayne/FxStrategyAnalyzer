@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.TradingStrategyAstNode">
+    <Position X="3.5" Y="9.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="StrategyParameters" Type="FXStrategy.LanguageParsing.AstNodes.StrategyParameterAstNode">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.257" Y="0.06" Height="0.182" Width="1.602" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAQAAAAAAABAAAAAAAAAAAAAAAIAAAAAQCAAAAAAA=</HashCode>
+      <FileName>AstNodes\TradingStrategyAstNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="TradingRules" />
+      <Property Name="GlobalIdentifierDef" />
+      <Property Name="PositionSets" />
+      <Property Name="StrategyParameters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.DefinePositionSetAstNode">
+    <Position X="3.25" Y="6.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAEAAAAQAAAAAAAAAAAACAABAAAA=</HashCode>
+      <FileName>AstNodes\DefinePositionSetAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.StrategyParameterAstNode">
+    <Position X="0.5" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAiAAAAAAA=</HashCode>
+      <FileName>AstNodes\StrategyParameterAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.StatementListNode">
+    <Position X="12" Y="9.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAEEAAAAAACAAAAAAA=</HashCode>
+      <FileName>AstNodes\Statements\StatementListNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.ForAllStatementAstNode">
+    <Position X="14" Y="12" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAABAAAAAAAAAAAAAAEAAAAAAACAAAAAAA=</HashCode>
+      <FileName>AstNodes\Statements\ForAllStatementAstNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="StatementList" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.IfStatementAstNode">
+    <Position X="15.25" Y="9.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAEQAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>AstNodes\Statements\IfStatementAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.VariableAstNode">
+    <Position X="28" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAQAAAAAAAEAAAACAAAAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\VariableAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.ElementIsInSetNode">
+    <Position X="26.25" Y="7.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAQBAAAAAgAAAAAAQAAAAEAAAACIAAAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\ElementIsInSetNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.PropertyAccessAstNode">
+    <Position X="29.25" Y="7.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAEAAAAAAAAAAAAAAAAAAAEAAAQCAQAAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\PropertyAccessAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.StringAstNode" Collapsed="true">
+    <Position X="33.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAA=</HashCode>
+      <FileName>AstNodes\StringAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.PositionSetAstNode">
+    <Position X="28.75" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>AstNodes\PositionSetAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.PredefinedSetAstNode">
+    <Position X="30.75" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAAA=</HashCode>
+      <FileName>AstNodes\PredefinedSetAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.ClosePositionAstNode">
+    <Position X="16.5" Y="12.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCAAAAAAA=</HashCode>
+      <FileName>AstNodes\Statements\ClosePositionAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.OpenPositionAstNode">
+    <Position X="19" Y="11.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgGAAAAAAg=</HashCode>
+      <FileName>AstNodes\Statements\OpenPositionAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.ConcreteTimeDefinitionAstNode">
+    <Position X="2.5" Y="16" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAA=</HashCode>
+      <FileName>AstNodes\ExecutionFrequencyAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.PeriodicTimeDefinitionAstNode">
+    <Position X="0.5" Y="13.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAA=</HashCode>
+      <FileName>AstNodes\ExecutionFrequencyAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.WeekDayTimeDefinitionAstNode">
+    <Position X="4" Y="13.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAACAAAAAAA=</HashCode>
+      <FileName>AstNodes\ExecutionFrequencyAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.GeneralRuleAstNode">
+    <Position X="5.25" Y="11.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAABAAAABACAAAAAAA=</HashCode>
+      <FileName>AstNodes\GeneralRuleAstNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExecuteFrequency" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.GlobalIdentifierAstNode" HideInheritanceLine="true">
+    <Position X="6.75" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEABAAAEAAAAAAAAAACAAAAAAg=</HashCode>
+      <FileName>AstNodes\Statements\GlobalParamDefAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.ConditionalRuleAstNode">
+    <Position X="7.25" Y="13.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACABACAAAAAAAAAAAgAAAAAgAACAIAAAAA=</HashCode>
+      <FileName>AstNodes\StopLossRuleAstNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RuleType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.ExpressionAstNode" Collapsed="true">
+    <Position X="25.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\ExpressionAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.ExecutonFrequencyAstNode" Collapsed="true" HideInheritanceLine="true">
+    <Position X="1.25" Y="12.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AstNodes\ExecutionFrequencyAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.AtTimeAstNode">
+    <Position X="23.5" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ExchangeRateAccessor" Type="FXStrategy.LanguageParsing.AstNodes.ExchangeRateAccessorAstNode" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.406" Y="4.002" />
+        <Point X="24.406" Y="4.688" />
+        <Point X="25.25" Y="4.688" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAgAAAAAAAAAAAAAAgEAQAACAAAAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\AtTimeAstNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExchangeRateAccessor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.CollectionAstNode" Collapsed="true">
+    <Position X="29.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\CollectionAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.DateAstNode">
+    <Position X="35.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\DateAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.DecimalAstNode">
+    <Position X="31.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\DecimalAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.IntegerAstNode">
+    <Position X="33.5" Y="8.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\IntegerAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.OperationExprAstNode">
+    <Position X="33.75" Y="3" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAgCAAAAAAAAAAAEAEAAIACAAAACAA=</HashCode>
+      <FileName>AstNodes\Expressions\OperationExprAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.SimpleMovingAverageAstNode">
+    <Position X="21.25" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAQAAAAgAAAAAAAAAAAAAAgEAQAACAAIAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\SimpleMovingAverageAstNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExchangeRateAccessor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.TimeDataSetAccessorAstNode">
+    <Position X="25.25" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\TimeDataSetAccessorAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.PortfolioOperationAstNode" Collapsed="true">
+    <Position X="17.75" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AstNodes\Statements\PortfolioOperationAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.StatementAstNode" Collapsed="true">
+    <Position X="17" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AstNodes\Statements\StatementAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.AssignmentExprAstNode">
+    <Position X="20" Y="9" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAQAAQCgAAAAAA=</HashCode>
+      <FileName>AstNodes\Statements\AssignmentExprAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.DeclarationAstNode">
+    <Position X="21.25" Y="12" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAQAAAAAAAAAAAAAAAAAAQQCAAiAAAA=</HashCode>
+      <FileName>AstNodes\Statements\DeclarationAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.LanguageParsing.AstNodes.ExchangeRateAccessorAstNode">
+    <Position X="25.25" Y="4.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgAIAAAAAAAAAAAAAACAAAAAAAAAAEAQAACAAAAAAA=</HashCode>
+      <FileName>AstNodes\Expressions\ExchangeRateAccessorAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="FXStrategy.LanguageParsing.AstNodes.PeriodicTypeAst" Collapsed="true">
+    <Position X="47" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAAAAAIAAAAA=</HashCode>
+      <FileName>AstNodes\ExecutionFrequencyAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FXStrategy.LanguageParsing.SpecialRuleType">
+    <Position X="7.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIACAAAAAACAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>SpecialRuleType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

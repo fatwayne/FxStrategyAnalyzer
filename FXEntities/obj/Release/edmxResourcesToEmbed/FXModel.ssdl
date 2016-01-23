@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FXModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="FXModelStoreContainer">
+    <EntitySet Name="Currency" EntityType="FXModel.Store.Currency" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExchangeRate" EntityType="FXModel.Store.ExchangeRate" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InterestRate" EntityType="FXModel.Store.InterestRate" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ExchangeRate_Base_Currency" Association="FXModel.Store.FK_ExchangeRate_Base_Currency">
+      <End Role="Currency" EntitySet="Currency" />
+      <End Role="ExchangeRate" EntitySet="ExchangeRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExchangeRate_Variable_Currency" Association="FXModel.Store.FK_ExchangeRate_Variable_Currency">
+      <End Role="Currency" EntitySet="Currency" />
+      <End Role="ExchangeRate" EntitySet="ExchangeRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InterestRate_Currency" Association="FXModel.Store.FK_InterestRate_Currency">
+      <End Role="Currency" EntitySet="Currency" />
+      <End Role="InterestRate" EntitySet="InterestRate" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="CurrencyCode" />
+    </Key>
+    <Property Name="CurrencyCode" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CurrencyName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ExchangeRate">
+    <Key>
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="BaseCurrencyCode" />
+      <PropertyRef Name="VariableCurrencyCode" />
+    </Key>
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="BaseCurrencyCode" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="VariableCurrencyCode" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="BidPrice" Type="decimal" Nullable="false" Scale="5" />
+    <Property Name="AskPrice" Type="decimal" Nullable="false" Scale="5" />
+  </EntityType>
+  <EntityType Name="InterestRate">
+    <Key>
+      <PropertyRef Name="CurrencyCode" />
+      <PropertyRef Name="Date" />
+    </Key>
+    <Property Name="CurrencyCode" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Value" Type="decimal" Nullable="false" Scale="5" />
+  </EntityType>
+  <Association Name="FK_ExchangeRate_Base_Currency">
+    <End Role="Currency" Type="FXModel.Store.Currency" Multiplicity="1" />
+    <End Role="ExchangeRate" Type="FXModel.Store.ExchangeRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="CurrencyCode" />
+      </Principal>
+      <Dependent Role="ExchangeRate">
+        <PropertyRef Name="BaseCurrencyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExchangeRate_Variable_Currency">
+    <End Role="Currency" Type="FXModel.Store.Currency" Multiplicity="1" />
+    <End Role="ExchangeRate" Type="FXModel.Store.ExchangeRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="CurrencyCode" />
+      </Principal>
+      <Dependent Role="ExchangeRate">
+        <PropertyRef Name="VariableCurrencyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InterestRate_Currency">
+    <End Role="Currency" Type="FXModel.Store.Currency" Multiplicity="1" />
+    <End Role="InterestRate" Type="FXModel.Store.InterestRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="CurrencyCode" />
+      </Principal>
+      <Dependent Role="InterestRate">
+        <PropertyRef Name="CurrencyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

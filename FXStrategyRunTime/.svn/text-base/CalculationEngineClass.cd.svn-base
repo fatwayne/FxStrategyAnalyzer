@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FXStrategy.Interpreter.ProfitCalculationEngine">
+    <Position X="4" Y="2" Width="2.75" />
+    <Members>
+      <Method Name="AddPositionProfitIndexes" Hidden="true" />
+      <Method Name="AssignEndDateToLastRecord" Hidden="true" />
+      <Method Name="ProfitCalculationEngine" Hidden="true" />
+      <Property Name="ReturnOverTime" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAACDABAAAIoAhAIEEAAQgAAAAAAAAAkAAAACAAAAAA=</HashCode>
+      <FileName>ProfitCalculationEngine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_currencyDataSource" />
+      <Property Name="ReturnOverTime" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="IndexOverTime" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FXStrategy.DataAccess.CurrencyDataSource">
+    <Position X="8.25" Y="2" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FXStrategy.DataAccess.TimeSeriesData">
+    <Position X="1" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

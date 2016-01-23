@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87D77B41-FB65-4595-9406-0DABE7288FC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StrategyAnalyzerTest</RootNamespace>
+    <AssemblyName>StrategyAnalyzerTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bottom3CurrenciesTest.cs" />
+    <Compile Include="CalculationEngineTest.cs" />
+    <Compile Include="CurrencyDataSourceTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExchangeRateAdapterTest.cs" />
+    <Compile Include="FxLanguageAnalyzerTest.cs" />
+    <Compile Include="InterestRateAdapterTest.cs" />
+    <Compile Include="PeriodicTimeDefinitionTest.cs" />
+    <Compile Include="ProfitCalculationEngineTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StrategyLanguageGrammarTest.cs" />
+    <Compile Include="StrategyRunTimeTest.cs" />
+    <Compile Include="TermManagerTest.cs" />
+    <Compile Include="Top3CurrenciesTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExcelFileReader\ExcelFileReader.csproj">
+      <Project>{D73CA78A-2EF8-4F3C-AA4A-2F278FE44479}</Project>
+      <Name>ExcelFileReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FXDataAccess\FXDataAccess.csproj">
+      <Project>{BEB980BA-F2C5-4E25-A4D1-1224EF5B6064}</Project>
+      <Name>FXDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FXEntities\FXEntities.csproj">
+      <Project>{D8AB9B67-B54E-466E-A033-F646A8485C4C}</Project>
+      <Name>FXEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FXStrategy.Analyzer\FXStrategy.Analyzer.csproj">
+      <Project>{9DD42F45-9C89-4224-836B-3A95A369C514}</Project>
+      <Name>FXStrategy.Analyzer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FXStrategy.ASTToModelTransform\FXStrategy.ASTToModelTransform.csproj">
+      <Project>{95A048F2-D280-40E3-A586-2B96526FA11D}</Project>
+      <Name>FXStrategy.ASTToModelTransform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FXStrategyDomainModel\FXStrategy.MetaModel.csproj">
+      <Project>{F15FA676-E2B1-4CA2-AA63-0457F8AC7D49}</Project>
+      <Name>FXStrategy.MetaModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FXStrategyRunTime\FXStrategy.Interpreter.csproj">
+      <Project>{DA0106E9-B30D-4B0C-9A59-A3991E321D6A}</Project>
+      <Name>FXStrategy.Interpreter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Irony\010.Irony.2010.csproj">
+      <Project>{D81F5C91-D7DB-46E5-BC99-49488FB6814C}</Project>
+      <Name>010.Irony.2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StrategyEvalutationContext\StrategyEvalutationContext.csproj">
+      <Project>{903212B2-F25C-41ED-8CD3-A4912391BAB8}</Project>
+      <Name>StrategyEvalutationContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StrategyLangaugeParser\StrategyLanguageParser.csproj">
+      <Project>{68520877-98C5-4A28-A994-4260291DBA73}</Project>
+      <Name>StrategyLanguageParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{671112CA-79D3-408A-9EB7-6ABAACF595FA}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Shadow Include="Test References\FXStrategyRunTime.accessor" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

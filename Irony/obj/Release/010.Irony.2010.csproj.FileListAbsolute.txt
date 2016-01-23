@@ -1,0 +1,13 @@
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\bin\Release\Irony.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\bin\Release\Irony.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\bin\Release\FXDataAccess.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\bin\Release\FXEntities.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\bin\Release\FXDataAccess.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\bin\Release\FXEntities.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\obj\Release\ResolveAssemblyReference.cache
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\obj\Release\Irony.Microsoft.MathResources.resources
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\obj\Release\Irony.Resources.resources
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\obj\Release\GenerateResource.read.1.tlog
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\obj\Release\GenerateResource.write.1.tlog
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\obj\Release\Irony.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\Irony\obj\Release\Irony.pdb

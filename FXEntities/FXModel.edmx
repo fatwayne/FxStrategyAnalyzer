@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FXModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="FXModelStoreContainer">
+          <EntitySet Name="Currency" EntityType="FXModel.Store.Currency" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ExchangeRate" EntityType="FXModel.Store.ExchangeRate" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InterestRate" EntityType="FXModel.Store.InterestRate" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_ExchangeRate_Base_Currency" Association="FXModel.Store.FK_ExchangeRate_Base_Currency">
+            <End Role="Currency" EntitySet="Currency" />
+            <End Role="ExchangeRate" EntitySet="ExchangeRate" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExchangeRate_Variable_Currency" Association="FXModel.Store.FK_ExchangeRate_Variable_Currency">
+            <End Role="Currency" EntitySet="Currency" />
+            <End Role="ExchangeRate" EntitySet="ExchangeRate" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InterestRate_Currency" Association="FXModel.Store.FK_InterestRate_Currency">
+            <End Role="Currency" EntitySet="Currency" />
+            <End Role="InterestRate" EntitySet="InterestRate" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="CurrencyCode" />
+          </Key>
+          <Property Name="CurrencyCode" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="CurrencyName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ExchangeRate">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="BaseCurrencyCode" />
+            <PropertyRef Name="VariableCurrencyCode" />
+          </Key>
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="BaseCurrencyCode" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="VariableCurrencyCode" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="BidPrice" Type="decimal" Nullable="false" Scale="5" />
+          <Property Name="AskPrice" Type="decimal" Nullable="false" Scale="5" />
+        </EntityType>
+        <EntityType Name="InterestRate">
+          <Key>
+            <PropertyRef Name="CurrencyCode" />
+            <PropertyRef Name="Date" />
+          </Key>
+          <Property Name="CurrencyCode" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Value" Type="decimal" Nullable="false" Scale="5" />
+        </EntityType>
+        <Association Name="FK_ExchangeRate_Base_Currency">
+          <End Role="Currency" Type="FXModel.Store.Currency" Multiplicity="1" />
+          <End Role="ExchangeRate" Type="FXModel.Store.ExchangeRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="CurrencyCode" />
+            </Principal>
+            <Dependent Role="ExchangeRate">
+              <PropertyRef Name="BaseCurrencyCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExchangeRate_Variable_Currency">
+          <End Role="Currency" Type="FXModel.Store.Currency" Multiplicity="1" />
+          <End Role="ExchangeRate" Type="FXModel.Store.ExchangeRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="CurrencyCode" />
+            </Principal>
+            <Dependent Role="ExchangeRate">
+              <PropertyRef Name="VariableCurrencyCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InterestRate_Currency">
+          <End Role="Currency" Type="FXModel.Store.Currency" Multiplicity="1" />
+          <End Role="InterestRate" Type="FXModel.Store.InterestRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="CurrencyCode" />
+            </Principal>
+            <Dependent Role="InterestRate">
+              <PropertyRef Name="CurrencyCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FXModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="FXEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Currencies" EntityType="FXModel.Currency" />
+          <EntitySet Name="InterestRates" EntityType="FXModel.InterestRate" />
+          <AssociationSet Name="FK_InterestRate_Currency" Association="FXModel.FK_InterestRate_Currency">
+            <End Role="Currency" EntitySet="Currencies" />
+            <End Role="InterestRate" EntitySet="InterestRates" />
+          </AssociationSet>
+          <EntitySet Name="ExchangeRates" EntityType="FXModel.ExchangeRate" />
+          <AssociationSet Name="FK_ExchangeRate_Base_Currency" Association="FXModel.FK_ExchangeRate_Base_Currency">
+            <End Role="Currency" EntitySet="Currencies" />
+            <End Role="ExchangeRate" EntitySet="ExchangeRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExchangeRate_Variable_Currency" Association="FXModel.FK_ExchangeRate_Variable_Currency">
+            <End Role="Currency" EntitySet="Currencies" />
+            <End Role="ExchangeRate" EntitySet="ExchangeRates" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="CurrencyCode" />
+          </Key>
+          <Property Name="CurrencyCode" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="CurrencyName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="InterestRates" Relationship="FXModel.FK_InterestRate_Currency" FromRole="Currency" ToRole="InterestRate" />
+          <NavigationProperty Name="ExchangeRates" Relationship="FXModel.FK_ExchangeRate_Base_Currency" FromRole="Currency" ToRole="ExchangeRate" />
+          <NavigationProperty Name="ExchangeRates1" Relationship="FXModel.FK_ExchangeRate_Variable_Currency" FromRole="Currency" ToRole="ExchangeRate" />
+        </EntityType>
+        <EntityType Name="InterestRate">
+          <Key>
+            <PropertyRef Name="CurrencyCode" />
+            <PropertyRef Name="Date" />
+          </Key>
+          <Property Type="String" Name="CurrencyCode" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="Date" Nullable="false" />
+          <Property Type="Decimal" Name="Value" Nullable="false" Precision="18" Scale="5" />
+          <NavigationProperty Name="Currency" Relationship="FXModel.FK_InterestRate_Currency" FromRole="InterestRate" ToRole="Currency" />
+        </EntityType>
+        <Association Name="FK_InterestRate_Currency">
+          <End Type="FXModel.Currency" Role="Currency" Multiplicity="1" />
+          <End Type="FXModel.InterestRate" Role="InterestRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="CurrencyCode" />
+            </Principal>
+            <Dependent Role="InterestRate">
+              <PropertyRef Name="CurrencyCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ExchangeRate">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="BaseCurrencyCode" />
+            <PropertyRef Name="VariableCurrencyCode" />
+          </Key>
+          <Property Type="DateTime" Name="Date" Nullable="false" />
+          <Property Type="String" Name="BaseCurrencyCode" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="VariableCurrencyCode" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="BidPrice" Nullable="false" Precision="18" Scale="5" />
+          <Property Type="Decimal" Name="AskPrice" Nullable="false" Precision="18" Scale="5" />
+          <NavigationProperty Name="BaseCurrency" Relationship="FXModel.FK_ExchangeRate_Base_Currency" FromRole="ExchangeRate" ToRole="Currency" />
+          <NavigationProperty Name="VariableCurrency" Relationship="FXModel.FK_ExchangeRate_Variable_Currency" FromRole="ExchangeRate" ToRole="Currency" />
+        </EntityType>
+        <Association Name="FK_ExchangeRate_Base_Currency">
+          <End Type="FXModel.Currency" Role="Currency" Multiplicity="1" />
+          <End Type="FXModel.ExchangeRate" Role="ExchangeRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="CurrencyCode" />
+            </Principal>
+            <Dependent Role="ExchangeRate">
+              <PropertyRef Name="BaseCurrencyCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExchangeRate_Variable_Currency">
+          <End Type="FXModel.Currency" Role="Currency" Multiplicity="1" />
+          <End Type="FXModel.ExchangeRate" Role="ExchangeRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="CurrencyCode" />
+            </Principal>
+            <Dependent Role="ExchangeRate">
+              <PropertyRef Name="VariableCurrencyCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FXModelStoreContainer" CdmEntityContainer="FXEntities">
+          <EntitySetMapping Name="Currencies"><EntityTypeMapping TypeName="FXModel.Currency"><MappingFragment StoreEntitySet="Currency">
+            <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+            <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="InterestRates">
+            <EntityTypeMapping TypeName="FXModel.InterestRate">
+              <MappingFragment StoreEntitySet="InterestRate">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExchangeRates">
+            <EntityTypeMapping TypeName="FXModel.ExchangeRate">
+              <MappingFragment StoreEntitySet="ExchangeRate">
+                <ScalarProperty Name="AskPrice" ColumnName="AskPrice" />
+                <ScalarProperty Name="BidPrice" ColumnName="BidPrice" />
+                <ScalarProperty Name="VariableCurrencyCode" ColumnName="VariableCurrencyCode" />
+                <ScalarProperty Name="BaseCurrencyCode" ColumnName="BaseCurrencyCode" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="FXModel">
+        <EntityTypeShape EntityType="FXModel.Currency" Width="1.5" PointX="0.75" PointY="2.375" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="FXModel.InterestRate" Width="1.5" PointX="3" PointY="3.75" Height="1.7879850260416674" />
+        <AssociationConnector Association="FXModel.FK_InterestRate_Currency" >
+          <ConnectorPoint PointX="2.25" PointY="4.0526432291666659" />
+          <ConnectorPoint PointX="3" PointY="4.0526432291666659" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="FXModel.ExchangeRate" Width="1.5" PointX="3" PointY="0.75" Height="2.3648893229166656" />
+        <AssociationConnector Association="FXModel.FK_ExchangeRate_Base_Currency" >
+          <ConnectorPoint PointX="2.25" PointY="2.7449446614583328" />
+          <ConnectorPoint PointX="3" PointY="2.7449446614583328" />
+        </AssociationConnector>
+        <AssociationConnector Association="FXModel.FK_ExchangeRate_Variable_Currency" >
+          <ConnectorPoint PointX="2.25" PointY="2.4974723307291664" />
+          <ConnectorPoint PointX="3" PointY="2.4974723307291664" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

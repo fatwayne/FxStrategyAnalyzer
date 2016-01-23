@@ -1,0 +1,13 @@
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\bin\Release\Wpf.TabControl.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\bin\Release\Wpf.TabControl.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\obj\Release\ResolveAssemblyReference.cache
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\obj\Release\Wpf.TabControl_MarkupCompile.cache
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\obj\Release\Wpf.TabControl_MarkupCompile.lref
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\obj\Release\Themes\Generic.baml
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\obj\Release\Wpf.TabControl.g.resources
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\obj\Release\StrategyAnalyzerCore.Visualization.Wpf.TabControl.Properties.Resources.resources
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\obj\Release\GenerateResource.read.1.tlog
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\obj\Release\GenerateResource.write.1.tlog
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\obj\Release\Wpf.TabControl.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\TabControl\obj\Release\Wpf.TabControl.pdb

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA0106E9-B30D-4B0C-9A59-A3991E321D6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FXStrategy.Interpreter</RootNamespace>
+    <AssemblyName>FXStrategyRunTime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProfitCalculationEngine.cs" />
+    <Compile Include="Data\Term.cs" />
+    <Compile Include="Data\TermManager.cs" />
+    <Compile Include="Portfolio\PortfolioRuntime.cs" />
+    <Compile Include="Portfolio\PositionRecord.cs" />
+    <Compile Include="Portfolio\PositionRuntime.cs" />
+    <Compile Include="Portfolio\PositionSetRunTime.cs" />
+    <Compile Include="Portfolio\PositionType.cs" />
+    <Compile Include="StrategyInterpreter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FXDataAccess\FXDataAccess.csproj">
+      <Project>{BEB980BA-F2C5-4E25-A4D1-1224EF5B6064}</Project>
+      <Name>FXDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FXEntities\FXEntities.csproj">
+      <Project>{D8AB9B67-B54E-466E-A033-F646A8485C4C}</Project>
+      <Name>FXEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FXStrategyDomainModel\FXStrategy.MetaModel.csproj">
+      <Project>{F15FA676-E2B1-4CA2-AA63-0457F8AC7D49}</Project>
+      <Name>FXStrategy.MetaModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StrategyEvalutationContext\StrategyEvalutationContext.csproj">
+      <Project>{903212B2-F25C-41ED-8CD3-A4912391BAB8}</Project>
+      <Name>StrategyEvalutationContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{671112CA-79D3-408A-9EB7-6ABAACF595FA}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CalculationEngineClass.cd" />
+    <None Include="RunTimeModel.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

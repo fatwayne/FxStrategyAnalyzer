@@ -1,0 +1,13 @@
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\bin\Debug\FXStrategy.MetaModel.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\bin\Debug\FXStrategy.MetaModel.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\bin\Debug\FXDataAccess.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\bin\Debug\FXStrategy.EvaluationContext.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\bin\Debug\Util.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\bin\Debug\FXEntities.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\bin\Debug\FXDataAccess.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\bin\Debug\FXStrategy.EvaluationContext.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\bin\Debug\Util.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\bin\Debug\FXEntities.pdb
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\obj\Debug\FXStrategy.MetaModel.dll
+D:\Documents\Study Materials\Master Thesis\Implementation\StrategyAnalyzerCore\FXStrategyDomainModel\obj\Debug\FXStrategy.MetaModel.pdb

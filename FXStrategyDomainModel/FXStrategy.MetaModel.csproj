@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F15FA676-E2B1-4CA2-AA63-0457F8AC7D49}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FXStrategy.MetaModel</RootNamespace>
+    <AssemblyName>FXStrategy.MetaModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Expression\And.cs" />
+    <Compile Include="Expression\ArgumentedVariable.cs" />
+    <Compile Include="Expression\ArithemeticExpression.cs" />
+    <Compile Include="Statement\Assignment.cs" />
+    <Compile Include="Expression\AtTime.cs" />
+    <Compile Include="Expression\BinaryOperation.cs" />
+    <Compile Include="Expression\ExchangeRateAccessor.cs" />
+    <Compile Include="Expression\InterestRateAccessor.cs" />
+    <Compile Include="Statement\ClosePosition.cs" />
+    <Compile Include="Expression\CollectionVariable.cs" />
+    <Compile Include="Statement\CompositeStatement.cs" />
+    <Compile Include="Expression\ConditionalRule.cs" />
+    <Compile Include="Expression\Constant.cs" />
+    <Compile Include="DataType\CurrencyPair.cs" />
+    <Compile Include="Expression\Decimal.cs" />
+    <Compile Include="Statement\Declaration.cs" />
+    <Compile Include="DataType\ExchangeRate.cs" />
+    <Compile Include="Expression\Integer.cs" />
+    <Compile Include="DataType\InterestRate.cs" />
+    <Compile Include="Expression\Maxima.cs" />
+    <Compile Include="Expression\Minima.cs" />
+    <Compile Include="Expression\MovingAverage.cs" />
+    <Compile Include="Statement\GlobalIdentifier.cs" />
+    <Compile Include="Expression\Expression.cs" />
+    <Compile Include="Expression\MethodAccessor.cs" />
+    <Compile Include="Statement\GenericType.cs" />
+    <Compile Include="Statement\IfStatement.cs" />
+    <Compile Include="Statement\ForAllStatement.cs" />
+    <Compile Include="Expression\IsInSet.cs" />
+    <Compile Include="Expression\IsNotInSet.cs" />
+    <Compile Include="Statement\OpenPosition.cs" />
+    <Compile Include="Expression\OperationExpression.cs" />
+    <Compile Include="Expression\Parameter.cs" />
+    <Compile Include="Expression\Plus.cs" />
+    <Compile Include="Portfolio\Portfolio.cs" />
+    <Compile Include="Statement\PositionOperation.cs" />
+    <Compile Include="Portfolio\PositionSet.cs" />
+    <Compile Include="Portfolio\PositionType.cs" />
+    <Compile Include="DataType\Position.cs" />
+    <Compile Include="Statement\PositionReEntry.cs" />
+    <Compile Include="Statement\PositionStopLoss.cs" />
+    <Compile Include="Expression\CollectionPropertiesAccessor.cs" />
+    <Compile Include="DataType\PredefinedDataSet.cs" />
+    <Compile Include="Statement\PositionTakeProfit.cs" />
+    <Compile Include="Statement\PositionTakeProfitReEntry.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statement\ReEntryRule.cs" />
+    <Compile Include="Statement\Statement.cs" />
+    <Compile Include="Statement\StopLossRule.cs" />
+    <Compile Include="Statement\TakeProfitReEntryRule.cs" />
+    <Compile Include="Statement\TakeProfitRule.cs" />
+    <Compile Include="TimeDataSet.cs" />
+    <Compile Include="Expression\TimeDataSetAccessor.cs" />
+    <Compile Include="Expression\TimeDataSetExtractor.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="TimeIntervalDefinition.cs" />
+    <Compile Include="TradingRule.cs" />
+    <Compile Include="TradingStrategy.cs" />
+    <Compile Include="Expression\Variable.cs" />
+    <Compile Include="Expression\PropertyAccessor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StrategyMetaModelDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FXDataAccess\FXDataAccess.csproj">
+      <Project>{BEB980BA-F2C5-4E25-A4D1-1224EF5B6064}</Project>
+      <Name>FXDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StrategyEvalutationContext\StrategyEvalutationContext.csproj">
+      <Project>{903212B2-F25C-41ED-8CD3-A4912391BAB8}</Project>
+      <Name>StrategyEvalutationContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{671112CA-79D3-408A-9EB7-6ABAACF595FA}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

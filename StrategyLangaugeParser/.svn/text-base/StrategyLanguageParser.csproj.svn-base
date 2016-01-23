@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68520877-98C5-4A28-A994-4260291DBA73}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FXStrategy.LanguageParsing</RootNamespace>
+    <AssemblyName>StrategyLanguageParser</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AstNodes\Expressions\AtTimeAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\DateAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\ExchangeRateAccessorAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\OperationExprAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\DecimalAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\IntegerAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\SimpleMovingAverageAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\TimeDataSetAccessorAstNode.cs" />
+    <Compile Include="AstNodes\Statements\AssignmentExprAstNode.cs" />
+    <Compile Include="AstNodes\Statements\ClosePositionAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\CollectionAstNode.cs" />
+    <Compile Include="AstNodes\DefinePositionSetAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\ElementIsInSetNode.cs" />
+    <Compile Include="AstNodes\Expressions\ExpressionAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\ExpressionListNode.cs" />
+    <Compile Include="AstNodes\Statements\DeclarationAstNode.cs" />
+    <Compile Include="AstNodes\Statements\ForAllStatementAstNode.cs" />
+    <Compile Include="AstNodes\Statements\IfStatementAstNode.cs" />
+    <Compile Include="AstNodes\Statements\OpenPositionAstNode.cs" />
+    <Compile Include="AstNodes\Statements\GlobalParamDefAstNode.cs" />
+    <Compile Include="AstNodes\Statements\PortfolioOperationAstNode.cs" />
+    <Compile Include="AstNodes\PositionSetAstNode.cs" />
+    <Compile Include="AstNodes\PositionType.cs" />
+    <Compile Include="AstNodes\PredefinedSetAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\PropertyAccessAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\PropertyElementCollectionNode.cs" />
+    <Compile Include="AstNodes\Statements\RuleStatementsNode.cs" />
+    <Compile Include="AstNodes\Statements\StatementAstNode.cs" />
+    <Compile Include="AstNodes\Statements\StatementListNode.cs" />
+    <Compile Include="AstNodes\StopLossRuleAstNode.cs" />
+    <Compile Include="AstNodes\StrategyParameterAstNode.cs" />
+    <Compile Include="AstNodes\StringAstNode.cs" />
+    <Compile Include="AstNodes\ExecutionFrequencyAstNode.cs" />
+    <Compile Include="AstNodes\GeneralRuleAstNode.cs" />
+    <Compile Include="AstNodes\TradingStrategyAstNode.cs" />
+    <Compile Include="AstNodes\Expressions\VariableAstNode.cs" />
+    <Compile Include="AstNodes\Weekday.cs" />
+    <Compile Include="SpecialRuleType.cs" />
+    <Compile Include="StrategyLanguageGrammar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StrategyLanguageTextualParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Irony\010.Irony.2010.csproj">
+      <Project>{D81F5C91-D7DB-46E5-BC99-49488FB6814C}</Project>
+      <Name>010.Irony.2010</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AstNodes\ASTNodesClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

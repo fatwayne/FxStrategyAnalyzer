@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Irony.Ast.TradingStrategyAstNode">
+    <Position X="1.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQCAAAAAAA=</HashCode>
+      <FileName>Ast\Strategy\TradingStrategyAstNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="TradingRules" />
+      <Property Name="PositionSets" />
+      <Property Name="StrategyParameters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Irony.Ast.TradingRuleAstNode">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAQAAAAABAAAABACAAAAAAA=</HashCode>
+      <FileName>Ast\Strategy\TradingRuleAstNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Statements" />
+      <Property Name="ExecuteFrequency" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Irony.Ast.DefinePositionSetAstNode">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAEAAAAQAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Ast\Strategy\DefinePositionSetAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.StrategyParameterAstNode" Collapsed="true">
+    <Position X="2" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAiAAAAAAA=</HashCode>
+      <FileName>Ast\Strategy\StrategyParameterAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.TimeIntervalDefinitionAstNode">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ast\Strategy\TimeIntervalDefinitionAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.StatementListNode">
+    <Position X="8" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Ast\Statements\StatementListNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="StatementList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Irony.Ast.Statement">
+    <Position X="7.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ast\Statements\Statement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.ForAllStatement">
+    <Position X="4.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAABAAAAAAAAAAAAAAEAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Ast\Statements\ForAllStatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.IfStatement">
+    <Position X="9.5" Y="9.75" Width="1.5" />
+    <InheritanceLine Type="Irony.Ast.Statement" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="8.747" />
+        <Point X="8" Y="9.188" />
+        <Point X="9.688" Y="9.188" />
+        <Point X="9.688" Y="9.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAACAAAAAAAAAAEQAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Ast\Statements\IfStatement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Condition" />
+      <Field Name="IfFalseStatements" />
+      <Field Name="IfTrueStatments" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Irony.Ast.ExpressionAstNode">
+    <Position X="13.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ast\Expressions\Expression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.ExpressionListNode">
+    <Position X="7" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Ast\Expressions\ExpressionListNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.Expressions.ElementIsInSetNode">
+    <Position X="17" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAgAAAAAAQAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Ast\Expressions\ElementIsInSetNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Set" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Irony.Ast.CollectionAstNode">
+    <Position X="19.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ast\Strategy\CollectionAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.PositionSetAstNode">
+    <Position X="20.75" Y="15.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>Ast\Strategy\PositionSetAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.PredefinedSetAstNode">
+    <Position X="18.25" Y="15.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAAA=</HashCode>
+      <FileName>Ast\Strategy\PredefinedSetAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.PropertyElementCollectionNode">
+    <Position X="15.5" Y="15.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQCAQAAAAA=</HashCode>
+      <FileName>Ast\Strategy\PropertyElementCollectionNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.PortfolioOperation">
+    <Position X="8.75" Y="12.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ast\Strategy\PortfolioOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.OpenPosition">
+    <Position X="10" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgGAAAAAAg=</HashCode>
+      <FileName>Ast\Strategy\OpenPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.ClosePosition">
+    <Position X="7.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCAAAAAAA=</HashCode>
+      <FileName>Ast\Strategy\ClosePosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.VariableAstNode">
+    <Position X="13" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAQAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Ast\Strategy\VariableAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.PropertyAccessAstNode">
+    <Position X="11" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQCAQAAAAA=</HashCode>
+      <FileName>Ast\Strategy\PropertyAccessAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Irony.Ast.StringAstNode">
+    <Position X="15" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAA=</HashCode>
+      <FileName>StringAstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

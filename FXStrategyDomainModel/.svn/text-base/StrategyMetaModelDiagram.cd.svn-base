@@ -1,0 +1,721 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="FXStrategy.MetaModel.TradingStrategy">
+    <Position X="4.5" Y="4" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="TradingRules" Type="FXStrategy.MetaModel.TradingRule" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="4.428" />
+        <Point X="7.554" Y="4.428" />
+        <Point X="7.554" Y="3.288" />
+        <Point X="8.25" Y="3.288" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.168" Y="-2.015" Height="0.182" Width="2.743" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ConstantVariableDefinitions" Type="FXStrategy.MetaModel.GlobalIdentifier">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.932" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AggAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAIAAEgAAAA=</HashCode>
+      <FileName>TradingStrategy.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Portfolio" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="TradingRules" />
+      <Property Name="ConstantVariableDefinitions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.TradingRule">
+    <Position X="8.25" Y="1.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ExecuteFrequency" Type="FXStrategy.MetaModel.TimeIntervalDefinition" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.25" Y="2.984" />
+        <Point X="7.062" Y="2.984" />
+        <Point X="7.062" Y="3.312" />
+        <Point X="5" Y="3.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAgAAAAAAAAAEAQAAAAAAAAAABAAAAAAQAA=</HashCode>
+      <FileName>TradingRule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExecuteFrequency" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.PositionSet">
+    <Position X="1.25" Y="6.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAFAgAEAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Portfolio\PositionSet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PositionType" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Expression">
+    <Position X="18.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Expression\Expression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Constant">
+    <Position X="14.5" Y="11.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Expression\Constant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Variable">
+    <Position X="9.5" Y="11.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAIQAAAAAAAQAAAAAAAAQAQAAAAAAAAA=</HashCode>
+      <FileName>Expression\Variable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.OperationExpression">
+    <Position X="18" Y="13" Width="2.25" />
+    <AssociationLine Name="LeftExpression" Type="FXStrategy.MetaModel.Expression">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.226" Y="0.362" Height="0.182" Width="1.163" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="RightExpression" Type="FXStrategy.MetaModel.Expression">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.075" Y="0.435" Height="0.182" Width="1.338" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Expression\OperationExpression.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LeftExpression" />
+      <Property Name="RightExpression" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Declaration">
+    <Position X="18.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Statement\Declaration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Statement" Collapsed="true">
+    <Position X="18.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Statement\Statement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.IfStatement">
+    <Position X="12.75" Y="2.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="InnerStatement" Type="FXStrategy.MetaModel.Statement" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.938" Y="2.75" />
+        <Point X="12.938" Y="1.531" />
+        <Point X="18.75" Y="1.531" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="4.198" Y="-0.985" Height="0.182" Width="1.45" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAFAAAAAAAAAAEAAACAAEAAAA=</HashCode>
+      <FileName>Statement\IfStatement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InnerStatement" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.ForAllStatement">
+    <Position X="15.5" Y="2.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="InnerStatement" Type="FXStrategy.MetaModel.Statement">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.126" Y="-1.001" Height="0.182" Width="1.425" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAgAQEAAAAAAEAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Statement\ForAllStatement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InnerStatement" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Assignment">
+    <Position X="16.75" Y="5.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAQAAAAAAQAAAAgAAAAAA=</HashCode>
+      <FileName>Statement\Assignment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.PositionOperation" Collapsed="true">
+    <Position X="20.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Statement\PositionOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.ClosePosition">
+    <Position X="19" Y="5.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Statement\ClosePosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.OpenPosition">
+    <Position X="21.25" Y="5.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABACAAAAAAAAACAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Statement\OpenPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.And" Collapsed="true">
+    <Position X="17.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Or" Collapsed="true">
+    <Position X="19.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Equal" Collapsed="true">
+    <Position X="21" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.LessThanOrEq" Collapsed="true">
+    <Position X="19.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Multiply" Collapsed="true">
+    <Position X="15.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Expression\ArithemeticExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Divide" Collapsed="true">
+    <Position X="15.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Expression\ArithemeticExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.BooleanExpression">
+    <Position X="19.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Expression\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.ArithmeticExpression" Collapsed="true">
+    <Position X="16" Y="14.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\ArithemeticExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Sum" Collapsed="true">
+    <Position X="15.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Expression\ArithemeticExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Portfolio">
+    <Position X="1.5" Y="4.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="PositionSets" Type="FXStrategy.MetaModel.PositionSet">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.464" Y="0.326" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAQAAABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Portfolio\Portfolio.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PositionSets" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.GlobalIdentifier" HideInheritanceLine="true">
+    <Position X="5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAAAAAA=</HashCode>
+      <FileName>Statement\GlobalIdentifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.TimeIntervalDefinition" Collapsed="true">
+    <Position X="3" Y="3" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAEAAAAAgAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TimeIntervalDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.ConcreteTimeDefinition">
+    <Position X="0.75" Y="0.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAQAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TimeIntervalDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.PeriodicTimeDefinition">
+    <Position X="3.25" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAADAAAAAQAAAEAAAABAAAAAACACBAAAAAAAAAA=</HashCode>
+      <FileName>TimeIntervalDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.WeekDayTimeDefinition">
+    <Position X="5.75" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIQAAAEAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>TimeIntervalDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.DataType.PredefinedDataSet" Collapsed="true">
+    <Position X="25.25" Y="10.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QABBCCCAgAAAAMAIAAAAVEQAAAEGsIAMiAIACSAACAA=</HashCode>
+      <FileName>DataType\PredefinedDataSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.IsInSet" Collapsed="true">
+    <Position X="23" Y="16.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\IsInSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.IsNotInSet" Collapsed="true">
+    <Position X="21.25" Y="16.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="FXStrategy.MetaModel.BooleanExpression" FixedToPoint="true">
+      <Path>
+        <Point X="20.5" Y="15.983" />
+        <Point X="20.5" Y="16.375" />
+        <Point X="21.25" Y="16.375" />
+        <Point X="21.25" Y="16.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\IsNotInSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.PropertyAccessor">
+    <Position X="12" Y="11.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAIAEAAAAAAAAAAAAAAAAAAAAAAQQAAABAAAA=</HashCode>
+      <FileName>Expression\PropertyAccessor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Variable" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.CollectionPropertiesAccessor">
+    <Position X="11.5" Y="14.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAIAAAQEAAAAAAAAAAAAAAAAAAAQAAAABAAAA=</HashCode>
+      <FileName>Expression\CollectionPropertiesAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.StopLossRule" Collapsed="true">
+    <Position X="7.5" Y="6.25" Width="1.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Statement\StopLossRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.DataType.Position" Collapsed="true">
+    <Position X="23.25" Y="10.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QABBCCCAgAAAAMAIAAAAVEQAAAEGsIAMiAIACSAACAA=</HashCode>
+      <FileName>DataType\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Type" Collapsed="true">
+    <Position X="24.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FXStrategy.MetaModel.PositionStopLoss">
+    <Position X="20.25" Y="7.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Statement\PositionStopLoss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.CompositeStatement" Collapsed="true">
+    <Position X="20.5" Y="2.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="FXStrategy.MetaModel.Statement" FixedToPoint="true">
+      <Path>
+        <Point X="19.5" Y="1.812" />
+        <Point X="19.5" Y="2" />
+        <Point X="20.625" Y="2" />
+        <Point X="20.625" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Statement\CompositeStatement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Statements" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.StopLossReEntryRule" Collapsed="true">
+    <Position X="9.25" Y="6.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Statement\ReEntryRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Subtract" Collapsed="true">
+    <Position X="15.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Expression\ArithemeticExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Integer" Collapsed="true">
+    <Position X="23" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABBCCCAgAAAAMAIAAAAVEQAAAEGsIAMiAIACSAACAA=</HashCode>
+      <FileName>Expression\Integer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Decimal" Collapsed="true">
+    <Position X="23" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABBCCCAgAAAAMAIAAAAVEQAAAEGsIAMiAIACSAACAA=</HashCode>
+      <FileName>Expression\Decimal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.ConditionalRule">
+    <Position X="8.25" Y="3.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACABACAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\ConditionalRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.PositionStopLossReEntry">
+    <Position X="22" Y="7.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Statement\PositionReEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.TimeDataSetAccessor">
+    <Position X="6.75" Y="11.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Expression\TimeDataSetAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.TimeDataSet" Collapsed="true">
+    <Position X="26" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABBCCCAgAAAAMAIAAAAVEQAAAEGsIAMiAIACSAACAA=</HashCode>
+      <FileName>TimeDataSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.DataType.InterestRate">
+    <Position X="27.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataType\InterestRate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.DataType.ExchangeRate">
+    <Position X="25.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataType\ExchangeRate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.InterestRateAccessor">
+    <Position X="6.25" Y="13.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAIAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\InterestRateAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.ExchangeRateAccessor">
+    <Position X="6.75" Y="15.75" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIAAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Expression\ExchangeRateAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.TimeDataSetOperation" Collapsed="true">
+    <Position X="2.5" Y="12" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="TimeDataSetAccessor" Type="FXStrategy.MetaModel.TimeDataSetAccessor">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.062" Y="0.288" Height="0.182" Width="1.524" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Expression\TimeDataSetExtractor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TimeDataSetAccessor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.MovingAverage">
+    <Position X="0.5" Y="13.25" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAADQAAAAAAQAI=</HashCode>
+      <FileName>Expression\MovingAverage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.AtTime">
+    <Position X="4" Y="13.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAACQAAAAAAQAA=</HashCode>
+      <FileName>Expression\AtTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Maxima">
+    <Position X="4" Y="15.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAQAI=</HashCode>
+      <FileName>Expression\Maxima.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.Minima">
+    <Position X="1.25" Y="15.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAQAI=</HashCode>
+      <FileName>Expression\Minima.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.PositionTakeProfit">
+    <Position X="15.75" Y="7.75" Width="2" />
+    <InheritanceLine Type="FXStrategy.MetaModel.PositionOperation" FixedToPoint="true">
+      <Path>
+        <Point X="21" Y="4.441" />
+        <Point X="21" Y="7.45" />
+        <Point X="16.312" Y="7.45" />
+        <Point X="16.312" Y="7.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Statement\PositionTakeProfit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.PositionTakeProfitReEntry">
+    <Position X="18" Y="7.75" Width="2" />
+    <InheritanceLine Type="FXStrategy.MetaModel.PositionOperation" FixedToPoint="true">
+      <Path>
+        <Point X="21" Y="4.441" />
+        <Point X="21" Y="7.45" />
+        <Point X="18.938" Y="7.45" />
+        <Point X="18.938" Y="7.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Statement\PositionTakeProfitReEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.TakeProfitRule" Collapsed="true">
+    <Position X="7.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Statement\TakeProfitRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.TakeProfitReEntryRule" Collapsed="true">
+    <Position X="9.25" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Statement\TakeProfitReEntryRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.NotEqual" Collapsed="true">
+    <Position X="23" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.GreaterThan" Collapsed="true">
+    <Position X="17.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.GreaterThanOrEq" Collapsed="true">
+    <Position X="17.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FXStrategy.MetaModel.LessThan" Collapsed="true">
+    <Position X="19.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expression\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="FXStrategy.MetaModel.PositionType">
+    <Position X="4.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Portfolio\PositionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FXStrategy.MetaModel.PeriodicType">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAAAAAIAAAAA=</HashCode>
+      <FileName>TimeIntervalDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

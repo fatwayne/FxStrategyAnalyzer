@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="FXStrategy.EvaluationContext.Context">
+    <Position X="15.5" Y="0.5" Width="2.75" />
+    <AssociationLine Name="ValuesTable" Type="FXStrategy.EvaluationContext.ValuesTable">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.079" Y="-0.284" Height="0.182" Width="1.193" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="PredefinedDataContainer" />
+      <Property Name="ValuesTable" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.DataAccess.CurrencyDataSource">
+    <Position X="15.5" Y="2.75" Width="6.25" />
+    <Members>
+      <Method Name="CurrencyDataSource" Hidden="true" />
+      <Method Name="PreLoad" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FXStrategy.Interpreter.StrategyInterpreter">
+    <Position X="8.75" Y="2.5" Width="6.25" />
+    <Members>
+      <Method Name="Clear" Hidden="true" />
+      <Method Name="CreatePositionSet" Hidden="true" />
+      <Method Name="StrategyInterpreter" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="PositionSetTable" Type="FXStrategy.Interpreter.PositionSetRuntime">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.105" Y="0.065" Height="0.182" Width="3.68" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QEABAAAAAIgAAAQAAAAAAAQAAAAAgAAkAAAAAABAABA=</HashCode>
+      <FileName>StrategyInterpreter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PositionSetTable" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FXStrategy.Interpreter.PositionSetRuntime">
+    <Position X="10.25" Y="4.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAEAgAAAAAAQCCAAAQAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Portfolio\PositionSetRunTime.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaseCurrency" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Positions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FXStrategy.EvaluationContext.PredefinedDataContainer">
+    <Position X="8.75" Y="0.5" Width="4.75" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="PredefinedDataContainer" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FXStrategy.DataAccess.Currency">
+    <Position X="14.75" Y="5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FXStrategy.Interpreter.PositionRuntime">
+    <Position X="8.25" Y="7.5" Width="6.25" />
+    <Members>
+      <Property Name="CurrencyInPosition" Hidden="true" />
+      <Method Name="PositionRuntime" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="PositionType" Type="FXStrategy.Interpreter.PositionType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.062" Y="10.853" />
+        <Point X="13.062" Y="11.103" />
+        <Point X="14.75" Y="11.103" />
+        <Point X="14.75" Y="10.625" />
+        <Point X="16.25" Y="10.625" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Status" Type="FXStrategy.Interpreter.PositionRuntimeStatus" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.562" Y="7.5" />
+        <Point X="13.562" Y="7.328" />
+        <Point X="16" Y="7.328" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="PositionRecords" Type="FXStrategy.Interpreter.PositionRecord" FixedToPoint="true">
+      <Path>
+        <Point X="14.5" Y="9.188" />
+        <Point X="18" Y="9.188" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="2.625" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEOACAAEZAAiAEAAAAAAAAACKAAgACAgAAgAAAAQAEA=</HashCode>
+      <FileName>Portfolio\PositionRuntime.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PositionType" />
+      <Property Name="Status" />
+      <Property Name="CurrentPositionRecord" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PositionRecords" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FXStrategy.Interpreter.PositionRecord">
+    <Position X="18" Y="8.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="BaseCurrency" Type="FXStrategy.DataAccess.Currency" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="19.071" Y="8.25" />
+        <Point X="19.071" Y="5.878" />
+        <Point X="17" Y="5.878" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="PositionRuntime" Type="FXStrategy.Interpreter.PositionRuntime">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.413" Y="0.045" Height="0.182" Width="1.473" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAQAAgIAQAAAAAAAAiAAAAQAAAAQAAAEAQAAA=</HashCode>
+      <FileName>Portfolio\PositionRecord.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CurrencyInPosition" />
+      <Property Name="BaseCurrency" />
+      <Property Name="PositionRuntime" />
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FXStrategy.EvaluationContext.ValuesTable" Collapsed="true">
+    <Position X="18.75" Y="1.75" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="FXStrategy.Interpreter.PositionType">
+    <Position X="16.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Portfolio\PositionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FXStrategy.Interpreter.PositionRuntimeStatus">
+    <Position X="16" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAACAAAA=</HashCode>
+      <FileName>Portfolio\PositionRuntime.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

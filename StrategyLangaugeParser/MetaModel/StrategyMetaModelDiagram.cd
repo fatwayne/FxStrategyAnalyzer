@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StrategyLanguageParser.MetaModel.TradingStrategy">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQCAAAAAAA=</HashCode>
+      <FileName>MetaModel\TradingStrategy.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="TradingRules" />
+      <Property Name="PositionSets" />
+      <Property Name="StrategyParameters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.TradingRule">
+    <Position X="4.75" Y="3" Width="1.5" />
+    <AssociationLine Name="Statements" Type="StrategyLanguageParser.MetaModel.Statement" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="3.488" />
+        <Point X="11.792" Y="3.488" Type="JumpStart" />
+        <Point X="11.958" Y="3.488" Type="JumpEnd" />
+        <Point X="12" Y="3.488" />
+        <Point X="12" Y="0.75" />
+        <Point X="15.75" Y="0.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAABAAAABACAAAAAAA=</HashCode>
+      <FileName>MetaModel\TradingRule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Statements" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.PositionSet">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAEAAAAQAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>MetaModel\PositionSet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PositionType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.StrategyParameter">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAiAAAAAAA=</HashCode>
+      <FileName>MetaModel\StrategyParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Expression">
+    <Position X="5.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\Expression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Constant">
+    <Position X="1" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAQAiAAAAAAA=</HashCode>
+      <FileName>MetaModel\Constant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Variable">
+    <Position X="3.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAQAAAAAAAQAAAAAAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>MetaModel\Variable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.OperationExpression">
+    <Position X="8.5" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\OperationExpression.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LeftExpression" />
+      <Property Name="RightExpression" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Declaration">
+    <Position X="13.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\Declaration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.BinaryOperation">
+    <Position X="11.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Type">
+    <Position X="17.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAggAAAAAQAAAAAAoAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\Type.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.BasicType">
+    <Position X="15" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\BasicType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Statement">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\Statement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.IfStatement">
+    <Position X="19" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\IfStatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.ForAllStatement">
+    <Position X="20.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\ForAllStatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Assignment">
+    <Position X="12.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\Assignment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.PortfolioOperation" Collapsed="true">
+    <Position X="16" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\PortfolioOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.ConditionalStatement">
+    <Position X="20.5" Y="1.25" Width="1.5" />
+    <AssociationLine Name="InnerStatements" Type="StrategyLanguageParser.MetaModel.Statement" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.25" Y="1.25" />
+        <Point X="21.25" Y="0.688" />
+        <Point X="17.25" Y="0.688" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\ConditionalStatement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ConditionExpr" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="InnerStatements" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.And">
+    <Position X="11" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Or">
+    <Position X="13.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Equal">
+    <Position X="10.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.NotEqual">
+    <Position X="13.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Decimal" Collapsed="true">
+    <Position X="15" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\BasicType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Integer" Collapsed="true">
+    <Position X="16.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\BasicType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Bool" Collapsed="true">
+    <Position X="13.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\BasicType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Multiply">
+    <Position X="6.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\ArithemeticExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Subtract">
+    <Position X="8.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\ArithemeticExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.DataTypeVariable">
+    <Position X="20" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\DataTypeVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.CurrencyNameDataSet">
+    <Position X="20" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\DataTypeVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.CurrencyPairDataSource">
+    <Position X="22" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\DataTypeVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.TimeSeries">
+    <Position X="18.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\DataTypeVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.ClosePosition">
+    <Position X="15.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\PortfolioOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.OpenPosition" Collapsed="true">
+    <Position X="17.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\PortfolioOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.ArithmeticExpression" Collapsed="true">
+    <Position X="7.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\ArithemeticExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrategyLanguageParser.MetaModel.Sum" Collapsed="true">
+    <Position X="5.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\ArithemeticExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="StrategyLanguageParser.MetaModel.PositionType">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaModel\PositionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
